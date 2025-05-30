@@ -1,0 +1,42 @@
+@use '../variables';
+
+.infos-bar {
+    padding: 16px 24px;
+    background-color: variables.$textColor;
+    display: flex; //para botao alinhar na horizontal
+    justify-content: space-between; // para dar margem ao botao. elemmentos distribuidos aos extremos
+
+    &__infos {
+        display: flex;
+        gap: 40px; //distancia entre as infos - prof viu no arq do figma
+
+        &__item {
+            font-size: 14px;
+            color: variables.$secundaryTextColor; //por padrao é branco, ai joga o preto
+
+            b {
+                color: variables.$secundaryTextColor;
+                font-size: 18px;
+                display: block; //para quebrar a linha
+            }
+        }
+    }
+
+    @media (max-width: 640px) { //versao mobile
+        display: block;
+
+        &__infos {
+            display: block;
+
+            &__item {
+                margin-bottom: 24px; //margem entre os textos no mobile
+            }
+        }
+    }
+
+    @media (max-width: 1024px) { //versao tablet
+        &__infos {
+            gap: 16px; //alinhar melhor os textos das INFOS!!
+        }
+    }
+}

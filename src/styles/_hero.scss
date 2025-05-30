@@ -1,0 +1,54 @@
+@use 'variables';
+
+.hero {
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover; //para a imagem completar todo o espaço do container do hero
+    position: relative; //só para fazer valer o before abaixo...e deixar o bloco preto apenas no hero
+
+    .container {
+        position: relative; //só para deixar o logo e texto acima do box preto que vai dar transparencia
+    }
+
+    &::before { //todo esse before é apenas para colocar a imagem do hero do background em marca dagua
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$secundaryTextColor;
+        content: '';
+        opacity: .7;
+    }
+
+    &__text {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    &__logo {
+        margin: 0 auto; //para centralizar o logo
+        height: 80px; //80px é tamanho do logo na altura. prof viu no arquivo do figma
+        display: block; //para fazer funcionar a centralizaçao do "margin zero auto"
+    }
+
+    @media (max-width: 640px) { //para celular apenas no hero
+        padding: 40px 0; //para diminuir o espaçamento do hero no celular
+
+        &__logo {
+            height: 40px;
+        }
+
+        &__text {
+            font-size: 22px;
+            line-height: 24px; //line height é o entrelinhas
+            margin: 24px 0; //diminuir as margens do texto com os demais elementos
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@use 'hero';
+@use 'components/infos_bar';
+@use 'components/buttons';
+@use 'event';
+@use 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    color: variables.$textColor;
+    list-style: none; //tirar os bullets
+}
+
+.container {
+    max-width: 960px; //area limite das infos
+    width: 100%;
+    margin: 0 auto; //para centralizar
+
+    @media (max-width: 640px) { //formato para celulares
+        max-width: 80%; //aqui o container tera 80% da tela no celular. os 20% de dobra serao as margens nas laterias
+    }
+
+    @media (max-width: 1024px) { //formato para tabletas ou telas pequenas
+        max-width: 90%; //aqui o container tera 90% da tela no celular. os 10% de dobra serao as margens nas laterias
+    }
+}

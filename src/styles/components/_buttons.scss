@@ -1,0 +1,27 @@
+@use '../variables'; //..para sair da pasta e ir para a pasta styles
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none; //para tirar sublinhado no texto do botao
+    text-align: center;
+    white-space: nowrap; //força o texto do botao a ficar em 1 linha. se tirar, ele quebra no tablet por exemplo
+
+    &--primary {
+        color: #fff;
+        background-color: variables.$purple;
+    }
+
+    @media (max-width: 640px) { //dar margem ao botao
+        display: flex;
+        width: 100%; //por causa da quebra, se o texto for muito grande
+        align-items: center;
+    }
+
+    @media (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
