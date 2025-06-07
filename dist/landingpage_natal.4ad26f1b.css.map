@@ -1,0 +1,1 @@
+{"mappings":"AAAA","sources":["src/scripts/main.css"],"sourcesContent":["footer {\n    background-color: rgb(23, 39, 177);\n    color: aliceblue;\n    padding: 16px 0;\n    font-size: small;\n}"],"names":[],"version":3,"file":"landingpage_natal.4ad26f1b.css.map","sourceRoot":"/__parcel_source_root/"}

@@ -103,7 +103,7 @@
 
 .button--primary {
   color: #fff;
-  background-color: #4f2ac3;
+  background-color: #831610;
 }
 
 @media (width <= 640px) {
@@ -126,19 +126,19 @@
 }
 
 .event--frontend {
-  background-image: linear-gradient(#1b6ca7, #442bdb);
+  background-image: linear-gradient(#07400d, #810b0b);
 }
 
 .event--ux-ui {
-  background-image: linear-gradient(#442bdb, #89223b);
+  background-image: linear-gradient(#810b0b, #07400d);
 }
 
 .event--data-science {
-  background-image: linear-gradient(#89223b, #9c791d);
+  background-image: linear-gradient(#07400d, #810b0b);
 }
 
 .event--backend {
-  background-image: linear-gradient(#9c791d, #89223b);
+  background-image: linear-gradient(#810b0b, #07400d);
 }
 
 .event--image-left .container {
@@ -205,5 +205,4 @@
     max-width: 90%;
   }
 }
-
 /*# sourceMappingURL=main.css.map */
